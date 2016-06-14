@@ -23,7 +23,7 @@ import Vertebrate from '../lib/Vertebrate';
 import 'should';
 
 describe('LivingThing', () => {
-  
+
   let livingThing;
 
   beforeEach(() => {
@@ -31,7 +31,7 @@ describe('LivingThing', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name, uniCellular, trueNucleus, anaerobic, asexual, mobile) that set respective private properties', () => {
       livingThing._name.should.be.equal('alien');
       livingThing._uniCellular.should.be.false;
@@ -40,11 +40,11 @@ describe('LivingThing', () => {
       livingThing._asexual.should.be.true;
       livingThing._mobile.should.be.true;
     });
-    
+
   });
 
   describe('getters and setters', () => {
-    
+
     it('should have a method named `name` that returns the value of the private property `_name`', () => {
       livingThing._name.should.be.equal('alien');
       livingThing.name.should.be.equal('alien');
@@ -64,15 +64,52 @@ describe('LivingThing', () => {
       livingThing._uniCellular.should.be.true;
       livingThing.uniCellular.should.be.true;
     });
+
+
+
+
+
+
+
+
+
+
+
+
     it('should have a method named `multiCellular` that returns a boolean value based on the private property `_uniCellular`', () => {
       livingThing._uniCellular.should.be.false;
       livingThing.multiCellular.should.be.true;;
     });
+
+
+
+
+
+
+
+
+
     it('should have a method named `multiCellular` that sets the value of the private property `_uniCellular`', () => {
       livingThing.multiCellular = false;
       livingThing._uniCellular.should.be.true;
       livingThing.multiCellular.should.be.false;
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     it('should have a method named `eukaryote` that returns a boolean value based on the private property `_trueNucleus`', () => {
       livingThing._trueNucleus.should.be.true;
@@ -111,7 +148,7 @@ describe('LivingThing', () => {
       livingThing._anaerobic.should.be.true;
       livingThing.aerobic.should.be.false;
     });
-    
+
     it('should have a method named `asexual` that returns a boolean value based on the private property `_asexual`', () => {
       livingThing._asexual.should.be.true;
       livingThing.asexual.should.be.true;
@@ -149,13 +186,13 @@ describe('LivingThing', () => {
       livingThing._mobile.should.be.false;
       livingThing.immobile.should.be.true;
     });
-    
+
   });
 
 });
 
 describe('Archaea', () => {
-  
+
   let archaea;
 
   beforeEach(() => {
@@ -167,7 +204,7 @@ describe('Archaea', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that sets the private `_name` value', () => {
       archaea._name.should.be.equal('Acidilobus saccharovorans');
     });
@@ -179,13 +216,13 @@ describe('Archaea', () => {
       archaea._asexual.should.be.true;
       archaea._mobile.should.be.false;
     });
-    
+
   });
 
 });
 
 describe('Bacteria', () => {
-  
+
   let bacteria;
 
   beforeEach(() => {
@@ -197,7 +234,7 @@ describe('Bacteria', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that sets the private `_name` value', () => {
       bacteria._name.should.be.equal('Clostridium');
     });
@@ -209,13 +246,13 @@ describe('Bacteria', () => {
       bacteria._asexual.should.be.true;
       bacteria._mobile.should.be.false;
     });
-    
+
   });
 
 });
 
 describe('Eukaryota', () => {
-  
+
   let eukaryota;
 
   beforeEach(() => {
@@ -227,7 +264,7 @@ describe('Eukaryota', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name, uniCellular, asexual, mobile, heterotroph) that set respective private properties', () => {
       eukaryota._name.should.be.equal('Yeast');
       eukaryota._uniCellular.should.be.false;
@@ -243,7 +280,7 @@ describe('Eukaryota', () => {
       eukaryota._asexual.should.be.true;
       eukaryota._mobile.should.be.false;
     });
-    
+
   });
 
   describe('getters and setters', () => {
@@ -270,7 +307,7 @@ describe('Eukaryota', () => {
 });
 
 describe('Fungi', () => {
-  
+
   let fungus;
 
   beforeEach(() => {
@@ -282,7 +319,7 @@ describe('Fungi', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       fungus._name.should.be.equal('The Fungus among us');
     });
@@ -295,12 +332,12 @@ describe('Fungi', () => {
       fungus._mobile.should.be.false;
       fungus._heterotroph.should.be.true;
     });
-    
+
   });
 });
 
 describe('Protista', () => {
-  
+
   let amoeba;
 
   beforeEach(() => {
@@ -312,7 +349,7 @@ describe('Protista', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name, uniCellular, mobile, heterotroph) that set respective private properties', () => {
       amoeba._name.should.be.equal('Amoeba');
       amoeba._uniCellular.should.be.false;
@@ -325,12 +362,12 @@ describe('Protista', () => {
       amoeba._anaerobic.should.be.false;
       amoeba._asexual.should.be.true;
     });
-    
+
   });
 });
 
 describe('Plant', () => {
-  
+
   let grass;
 
   beforeEach(() => {
@@ -342,7 +379,7 @@ describe('Plant', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       grass._name.should.be.equal('Grass');
     });
@@ -355,12 +392,12 @@ describe('Plant', () => {
       grass._mobile.should.be.false;
       grass._heterotroph.should.be.false;
     });
-    
+
   });
 });
 
 describe('Animal', () => {
-  
+
   let dog;
 
   beforeEach(() => {
@@ -372,7 +409,7 @@ describe('Animal', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name, symmetry) that set respective private properties', () => {
       dog._name.should.be.equal('Dog');
       dog._symmetry.should.be.equal('bilateral');
@@ -386,7 +423,7 @@ describe('Animal', () => {
       dog._mobile.should.be.true;
       dog._heterotroph.should.be.true;
     });
-    
+
   });
 
   describe('getters and setters', () => {
@@ -403,7 +440,7 @@ describe('Animal', () => {
 });
 
 describe('Cnidarian', () => {
-  
+
   let jellyfish;
 
   beforeEach(() => {
@@ -415,7 +452,7 @@ describe('Cnidarian', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       jellyfish._name.should.be.equal('Jellyfish');
     });
@@ -436,7 +473,7 @@ describe('Cnidarian', () => {
 });
 
 describe('Bilateral', () => {
-  
+
   let cat;
 
   beforeEach(() => {
@@ -448,7 +485,7 @@ describe('Bilateral', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name, body) that set respective private properties', () => {
       cat._name.should.be.equal('Cat');
       cat._body.should.be.equal('vertebral-column');
@@ -481,7 +518,7 @@ describe('Bilateral', () => {
 });
 
 describe('Mollusk', () => {
-  
+
   let stingRay;
 
   beforeEach(() => {
@@ -493,7 +530,7 @@ describe('Mollusk', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       stingRay._name.should.be.equal('Sting Ray');
     });
@@ -514,7 +551,7 @@ describe('Mollusk', () => {
 });
 
 describe('Anthropod', () => {
-  
+
   let lobster;
 
   beforeEach(() => {
@@ -526,7 +563,7 @@ describe('Anthropod', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       lobster._name.should.be.equal('Lobster');
     });
@@ -547,7 +584,7 @@ describe('Anthropod', () => {
 });
 
 describe('Vertebrate', () => {
-  
+
   let swordFish;
 
   beforeEach(() => {
@@ -559,7 +596,7 @@ describe('Vertebrate', () => {
   });
 
   describe('constructor', () => {
-    
+
     it('should have arguments (name) that set respective private properties', () => {
       swordFish._name.should.be.equal('Swordfish');
     });
